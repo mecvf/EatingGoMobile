@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MenuServiceProvider } from '../providers/menu-service/menu-service';
 import { TipoServiceProvider } from '../providers/tipo-service/tipo-service';
+import { SessionServiceProvider } from '../providers/session-service/session-service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TipoServiceProvider } from '../providers/tipo-service/tipo-service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     
     MenuServiceProvider,
-    TipoServiceProvider
+    TipoServiceProvider,
+    SessionServiceProvider
   ]
 })
 export class AppModule {}

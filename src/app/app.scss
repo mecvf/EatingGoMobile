@@ -14,3 +14,112 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../assets/fonts/roboto-bold.woff2');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../assets/fonts/roboto-regular.woff2');
+}
+
+body, span, button, h1, h2, h3, h4, h5, h6, p, ion-item, ion-title {
+  font-family: 'Roboto-Regular';
+}
+
+.content-block {
+  background: linear-gradient(to bottom,  #e8501a 0%, #f29100 100%);
+}
+
+.item {
+  background: transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.normal-orange {
+  color: #f9b233;
+}
+
+.roboto-bold {
+  font-family: 'Roboto-Bold';
+}
+
+.toolbar-background {
+  background-color: #e8501a;
+}
+
+.bar-buttons {
+  color: white;
+  font-weight: bold;
+}
+
+.toolbar-title {
+  margin-left: 10px;
+}
+
+.logo-toolbar {
+  width: 35px;
+  height: 35px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.alternate-row-color:nth-child(odd) {
+  background-color: rgba(240, 130, 41, 0.5);
+
+  .local-details {
+    background-color: rgba(240, 130, 41, 0.29);
+  }
+}
+
+.alternate-row-color:nth-child(even) {
+  background-color: rgba(242, 146, 45, 0.8);
+
+  .local-details {
+    background-color: rgba(242, 146, 45, 0.9) !important;
+  }
+}
+
+.subtitle-row {
+  padding: 10px;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.tab-category {
+  padding: 10px;
+}
+
+.product-row {
+  padding: 10px;
+}
+
+.menu-content {
+  background-color: #e6332a;
+}
+
+.img-row-menu {
+  padding: 20px;
+}
+
+.circle {
+  border-radius: 50%;
+}

@@ -1,13 +1,13 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+<ion-header >
+  <ion-navbar  >
+    <ion-title >Menu del Día</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 <ion-item *ngFor="let m of menus">   
   <ion-avatar item-start>
-    <h1>Menu del día</h1> 
+     
     <h2>{{ m.menu.fecha }}</h2>
   </ion-avatar>
 </ion-item>

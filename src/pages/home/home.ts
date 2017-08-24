@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { MenuServiceProvider } from '../../providers/menu-service/menu-service';
 import { TipoServiceProvider } from '../../providers/tipo-service/tipo-service';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

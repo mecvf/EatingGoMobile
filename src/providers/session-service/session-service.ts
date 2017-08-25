@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 /*
   Generated class for the SessionServiceProvider provider.
@@ -10,9 +12,18 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class SessionServiceProvider {
+	
+	requestOptions: RequestOptions;
 
   constructor(public http: Http) {
-    console.log('Hello SessionServiceProvider Provider');
+  	let headers = new Headers({ 'Content-Type': 'application/json' });
+    this.requestOptions = new RequestOptions({headers: headers});
+  }
+
+  obtengoToken(email, password) {
+    return this.http.post('http://localhost:3000/api/sessions',{"email": email, "password":password}, this.requestOptions)
+    .map(res => res.json())
+    ;
   }
 
 }

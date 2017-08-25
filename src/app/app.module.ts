@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -15,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MenuServiceProvider } from '../providers/menu-service/menu-service';
 import { TipoServiceProvider } from '../providers/tipo-service/tipo-service';
 import { SessionServiceProvider } from '../providers/session-service/session-service';
+import{ AlertService} from '../providers/alert-service/alert-service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { SessionServiceProvider } from '../providers/session-service/session-ser
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +47,8 @@ import { SessionServiceProvider } from '../providers/session-service/session-ser
     
     MenuServiceProvider,
     TipoServiceProvider,
-    SessionServiceProvider
+    SessionServiceProvider,
+    AlertService
   ]
 })
 export class AppModule {}

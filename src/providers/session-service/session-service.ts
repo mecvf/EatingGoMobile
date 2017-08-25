@@ -21,7 +21,7 @@ export class SessionServiceProvider {
   }
 
   obtengoToken(email, password) {
-    return this.http.post('http://localhost:3000/api/sessions',{"email": email, "password":password}, this.requestOptions)
+    return this.http.post('http://eatinggoapp.herokuapp.com/api/sessions',{"email": email, "password":password}, this.requestOptions)
     .map(res => res.json())
     ;
   }

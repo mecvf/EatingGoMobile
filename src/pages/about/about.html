@@ -1,11 +1,19 @@
+<ion-header no-border>
+  <ion-toolbar no-padding>
+    
+    <ion-navbar  >
+    <ion-title >EatingGo</ion-title>
+  </ion-navbar>
+  </ion-toolbar>
+  
+</ion-header>
+
 <ion-content class="content-block">
-  <ion-grid no-padding>
-    <ion-row>
-      
-    </ion-row>
+  <ion-grid padding>
+    
     <ion-row>
       <ion-col col-12 padding class="text-center">
-        <h3 class="welcome-text">Bienvenido/a</h3>
+        <h3 class="welcome-text">Ingreso a EatingGo</h3>
       </ion-col>
     </ion-row>
     
@@ -14,12 +22,10 @@
 
   <div padding>
     <ion-segment [(ngModel)]="loginOrSignup">
-      <ion-segment-button value="login">
-        Login
+      <ion-segment-button  value="login">
+        <h1 class="login-color"> Login </h1>
       </ion-segment-button>
-      <!-- <ion-segment-button value="signup">
-        Signup
-      </ion-segment-button> -->
+      
     </ion-segment>
   </div>
 
@@ -36,7 +42,7 @@
               </ion-input>
             </ion-item>
           </ion-list>
-          <button class="normal-blue-2-background" ion-button type="submit" block>Entrar</button>
+          <button class="verde-boton" ion-button type="submit" block>Entrar</button>
         </form>
       </ion-item>
     </ion-list>

@@ -1,1 +1,22 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!-- <ion-nav [root]="rootPage"></ion-nav> -->
+<ion-menu [content]="myNav">
+  <ion-content class="menu-content">
+    <ion-grid>
+      
+      <ion-row class="tab-category">
+        
+      </ion-row>
+      
+      
+      <ion-row class="tab-category">
+        <ion-col offset-1 col-10 (click)="logout()" menuClose>
+          <ion-icon name="exit"></ion-icon>
+          Salir
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #myNav [root]="rootPage">
+</ion-nav>

@@ -1,35 +1,46 @@
-<ion-header >
-  <ion-navbar  >
+
+<ion-header no-border>
+  <ion-toolbar no-padding>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        <div class="toolbar-title">  </div>
+      </button>
+    </ion-buttons>
+    <ion-navbar  >
     <ion-title >Menu del Día</ion-title>
   </ion-navbar>
+  </ion-toolbar>
+  
 </ion-header>
 
-<ion-content>
-<ion-item *ngFor="let m of menus">   
-  <ion-avatar item-start>
+<ion-content class= "content-block">
+<ion-list-header  class="text-center" *ngFor="let m of menus">   
+  
      
-    <h2>{{ m.menu.fecha }}</h2>
-  </ion-avatar>
-</ion-item>
+    <h2><b>{{ m.menu.fecha }}</b></h2>
+  
+</ion-list-header>
 
   <ion-item *ngFor="let t of tipos">
-    <ion-avatar item-start>
+    
         <h2>{{t.nombre}}  </h2>
-        
-    </ion-avatar>
-
-    <div *ngFor="let m of menus">
+        <div *ngFor="let m of menus">
 
       <ion-avatar item-start>
         <div *ngFor="let producto of m.productos">
-          <div *ngIf="t.id==producto.tipo_id">
+          <div class="text-left" *ngIf="t.id==producto.tipo_id">
           
           <p> {{ producto.nombre}}</p>
           </div>
         </div>
+        <br>
       </ion-avatar>
 
     </div>
+    
+
+    
 
   </ion-item>
   <ion-list>
